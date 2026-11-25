@@ -15,8 +15,8 @@ The page carries the full front-page apparatus: a giant date masthead, a six-num
 ## Files
 
 - `entry.png` — the finished image (1024×1024, 378,604 bytes)
-- `page.html` — the page source the image was rendered from (hand-written HTML/CSS/SVG, rendered with headless Chromium; three renders verified byte-identical)
-- `main.ts` — the entry program: copies `entry.png` to the output directory and verifies the copy byte for byte
+- `page.html` — the page source the image was rendered from (hand-written HTML/CSS/SVG, rendered with headless Chromium; repeated renders verified byte-identical)
+- `main.ts` — the entry program: renders `page.html` to `entry.png` with headless Chromium and verifies the render byte for byte (dimensions, size, sha256); when no Chromium binary is available it falls back to the shipped `entry.png` and verifies that copy instead
 
 ## Run
 
